@@ -35,7 +35,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="inputEvent" class="form-label">Event</label>
-                            <input type="text" class="form-control" id="inputEvent" name="Event" placeholder="Event" value="{{ old('event', $event ?? '') }}" required readonly>
+                            <input type="text" class="form-control" id="inputEvent" name="event" placeholder="Event" value="{{ old('event', $event ?? '') }}" required readonly>
                         </div>
                         <div class="col-md-6">
                             <label for="inputPaket" class="form-label">Paket</label>
