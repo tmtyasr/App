@@ -6,13 +6,43 @@
     <link rel="icon" href="{{ asset('img/icon/Screenshot_2023-11-14_122440-removebg-preview.png') }}"/>
     <title>Twentyfour Photo</title>
     @include('Home-Page.css')
+
+    <style>
+        .no-orders {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .no-orders svg {
+            width: 100px;
+            height: 100px;
+            color: #6c757d;
+        }
+        .no-orders p {
+            font-size: 20px;
+            color: #6c757d;
+        }
+        .no-orders .cta {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .no-orders .cta:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
 </head>
 <body class="bg-light">
 
 @include('Home-Page.header')
 
-<div class="my-5 px-4">
-  <h2 class="fw-bold h-font text-center">DAFTAR ORDER</h2>
+<div class="my-5 px-4 mb-0">
+  <h2 class="fw-bold h-font text-center">DAFTAR BOOKING</h2>
 </div>
 
 @if(Session::has('success'))    
@@ -27,10 +57,15 @@
     </div>
 @endif
 
-<div class="container d-flex table-responsive">
+<div class="container d-flex table-responsive justify-content-center">
     @if($bookings->isEmpty())
-        <div class="alert alert-danger w-100 text-center">
-            Belum ada order,yuk order sekarang!
+        <div class=" w-50 text-center no-orders">
+        <!-- <i class="bi bi-emoji-frown" style="font-size: 100px; color: #6c757d;"></i>
+        <p style="font-size: 20px; color: #6c757d;">Belum ada booking, yuk booking sekarang <i class="bi bi-emoji-wink"></i></p> -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm2 3h10v2H3V7z"/>
+        </svg>
+        <p class="mt-3">Belum ada booking,yuk booking sekarang <i class="bi bi-emoji-wink"></i></p>
         </div>
     @else
         <table class="table table-hover border-dark bg-white text-center">
