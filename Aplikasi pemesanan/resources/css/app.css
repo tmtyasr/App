@@ -1,0 +1,62 @@
+@import 'node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
+:root{
+  --custom: #9CAFAA;
+  --custom_hover: #AEC2B6;
+}
+*{
+  font-family: "Poppins", sans-serif;
+}
+
+.h-font{
+  font-family: "Merienda", cursive;
+}
+
+.container-fluid img {
+  width: 200px;
+}
+
+.custom-bg{
+  background-color: var(--custom);
+  border: 1px solid var(--custom);
+}
+
+.custom-bg:hover{
+  background-color: var(--custom_hover);
+  border-color: var(--custom_hover);
+}
+
+.bg {
+  background-color: var(--custom);
+}
+
+.availability-form{
+  margin-top: -50px;
+  z-index: 2;
+  position: relative;
+}
+
+.overflow-hidden {
+overflow: hidden;
+}
+.img-container {
+position: relative;
+width: 100%;
+height: 100%;
+}
+.zoom {
+transition: transform 0.5s ease;
+width: 100%;
+height: auto;
+}
+.zoom:hover {
+transform: scale(1.2); /* Adjust the scale as needed */
+}
+
+@media screen and (max-width: 575px) {
+  .availability-form{
+  margin-top: -50px;
+  padding: 0 35px;
+  }
+  
+}

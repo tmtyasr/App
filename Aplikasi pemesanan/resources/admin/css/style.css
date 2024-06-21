@@ -1,0 +1,67 @@
+@import 'node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
+:root{
+    --custom: #9CAFAA;
+    --custom_hover: #AEC2B6;
+  }
+  *{
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .h-font{
+    font-family: "Merienda", cursive;
+  }
+
+  .db-bg{
+    background-color: var(--custom);
+    border: 1px solid var(--custom);
+  }
+  .container-fluid img {
+    width: 200px;
+  }
+  /* .border-top{
+    background-color: black;
+  } */
+  
+  .custom-bg{
+    background-color: var(--custom);
+    border: 1px solid var(--custom);
+  }
+  
+  .custom-bg:hover{
+    background-color: var(--custom_hover);
+    border-color: var(--custom_hover);
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+    }
+  
+#dashboard-menu{
+  position : fixed;
+  height:100%;
+  z-index: 1050; /* Memastikan menu ada di atas konten */
+}
+
+.navbar-toggler {
+  margin-left: auto; /* Mengatur tombol toggle agar berada di sebelah kanan */
+}
+
+.nav-item {
+  width: 100%; /* Mengatur lebar item menu agar penuh untuk area klik yang lebih baik */
+}
+
+.nav-link {
+  padding: 10px 15px; /* Mengatur padding untuk interaksi sentuh yang lebih baik */
+}
+
+  @media screen and (max-width: 991px) {  
+    #dashboard-menu{
+      height: auto;
+      width: 100%;
+    }
+
+    #main-content{
+      margin-top: 100px;
+    }
+  }
